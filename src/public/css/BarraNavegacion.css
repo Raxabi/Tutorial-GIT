@@ -1,0 +1,8 @@
+.link {
+    color: gray;
+    transition: color 0.5s;
+}
+
+.link:hover {
+    color: white;
+}

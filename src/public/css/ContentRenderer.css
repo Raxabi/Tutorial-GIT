@@ -1,0 +1,15 @@
+.custom-mt {
+    margin-top: 10rem;
+}
+
+#card {
+    max-width: 90%;
+    max-height: fit-content;
+    width: max-content;
+    height: max-content;
+}
+
+img {
+    width: 100%;
+    height: inherit;
+}

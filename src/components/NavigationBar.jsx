@@ -1,39 +1,49 @@
 import { Container, Nav, Navbar } from "react-bootstrap"
+import { NavLink } from "react-router-dom"
 import { FaHouseDamage } from "react-icons/fa"
-import usePages from "../context/usePages"
-import contentData from "../Data";
+
+import "../public/css/BarraNavegacion.css"
 
 const NavigationBar = () => {
-  const {setActualPage} = usePages();
-
-  const findSelectedPage = (id) => (
-    contentData.find(page => page.id === id)
-  )
-
   return (
     <Navbar bg="dark" variant="dark">
       <Container>
         <Nav className="m-auto align-items-center">
-            <Nav.Link className="me-5" onClick={() => setActualPage(findSelectedPage(0))}>
-              <FaHouseDamage size={40} />
-            </Nav.Link>
-            <Nav.Link className="text-center me-5" onClick={() => setActualPage(findSelectedPage(1))}>
+            <NavLink
+              className="text-center me-5"
+              to={"/"}
+            >
+              <FaHouseDamage className="link" size={40} />
+            </NavLink>
+            <NavLink
+              className="text-center me-5 text-decoration-none link"
+              to={"/que-es-un-sistema-de-control-de-versiones"}
+            >
               ¿Que es<br/>
               un sistema de control de versiones?
-            </Nav.Link>
-            <Nav.Link className="text-center me-5" onClick={() => setActualPage(findSelectedPage(2))}>
+            </NavLink>
+            <NavLink
+              className="text-center me-5 text-decoration-none link"
+              to={"/git-vs-svn"}
+            >
               Git<br/>
               ⚔VS⚔<br/>
               SVN
-            </Nav.Link>
-            <Nav.Link className="text-center me-5" onClick={() => setActualPage(findSelectedPage(3))}>
+            </NavLink>
+            <NavLink
+              className="text-center me-5 text-decoration-none link"
+              to={"/cual-elegir"}
+            >
               ¿Cuándo decantarte<br/>
               por uno u otro?
-            </Nav.Link>
-            <Nav.Link className="text-center" onClick={() => setActualPage(findSelectedPage(4))}>
+            </NavLink>
+            <NavLink
+              className="text-center text-decoration-none link"
+              to={"/tutorial"}
+            >
               Pequeño proyecto de ejemplo<br/>
               Sobre el funcionamiento de git
-            </Nav.Link>
+            </NavLink>
         </Nav>
       </Container>
     </Navbar>

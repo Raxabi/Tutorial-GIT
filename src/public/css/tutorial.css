@@ -1,0 +1,14 @@
+#tutorial-container {
+    margin: auto;
+    max-width: 60%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+h1 {
+    text-align: justify;
+}
+
+img {
+    max-width: 80%;
+}
